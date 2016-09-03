@@ -37,3 +37,8 @@ def Task_5_solve_integrals():
 
     print("Undefind integral :", undef_integr)
     print("Defind integral :", def_integr)
+
+def Task_6_draw_graph():
+    x=Symbol('x')
+    func=(sin(x)**2)/(x+1)
+    p1=plot(func,(x, 0, 50))
