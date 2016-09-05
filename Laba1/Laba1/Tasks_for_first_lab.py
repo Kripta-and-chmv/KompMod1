@@ -1,4 +1,6 @@
 from sympy import *
+
+import matplotlib.pyplot as plt
 import time
 
 def Task_1_solve_the_equation(): 
@@ -65,3 +67,12 @@ def Task_6_draw_graph():
     x=Symbol('x')
     func=(sin(x)**2)/(x+1)
     p1=plot(func,(x, 0, 50))
+
+def Task_7_ghistogramma():
+    x = [0, 1, 2, 3, 4, 5, 6, 7]
+    y=[5, 4, 2, 7, 0, 3, 3, 4]
+    width=1
+
+    plt.bar(x, y, width)
+    plt.xticks(x)
+    plt.show()
