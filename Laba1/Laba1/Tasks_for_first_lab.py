@@ -23,7 +23,6 @@ def Task_3_Bubble_sort(amount):
             for j in range(0, len(arr)-1):
                 if(arr[j]>arr[j+1]):
                     arr[j], arr[j+1] = arr[j+1], arr[j]
-        return arr
 
     arr1=[]
 
@@ -37,7 +36,7 @@ def Task_3_Bubble_sort(amount):
     print("Time of standart sorting of ", amount, " elements: ", time.time()-t1)
 
     t2=time.time()
-    arr2=BubbleSort(arr2)
+    BubbleSort(arr2)
     print("Time of bubble sorting of ", amount," elements: ", time.time()-t2)
 
 def Task_4_find_derivative():
