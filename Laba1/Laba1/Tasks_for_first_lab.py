@@ -1,4 +1,5 @@
 from sympy import *
+import time
 
 def Task_1_solve_the_equation(): 
     x = Symbol('x') 
@@ -15,6 +16,29 @@ def Task_2_work_with_file(filename):
     filef=open(filename, 'w') 
     filef.write(allFile+allFile) 
     filef.close()
+
+def Task_3_Bubble_sort(amount):
+    def BubbleSort(arr):
+        for i in range(0, len(arr)-1):
+            for j in range(0, len(arr)-1):
+                if(arr[j]>arr[j+1]):
+                    arr[j], arr[j+1] = arr[j+1], arr[j]
+        return arr
+
+    arr1=[]
+
+    for i in range(amount, 0, -1):
+        arr1.append(i)
+
+    arr2=arr1
+
+    t1=time.time()
+    arr1.sort()
+    print("Time of standart sorting of ", amount, " elements: ", time.time()-t1)
+
+    t2=time.time()
+    arr2=BubbleSort(arr2)
+    print("Time of bubble sorting of ", amount," elements: ", time.time()-t2)
 
 def Task_4_find_derivative():
     x=Symbol('x') 
